@@ -1,6 +1,6 @@
 <?php
 class Dao {
-    private $dsn = "mysql:host=localhost;dbname=exemplo";
+    private $dsn = "mysql:host=localhost;dbname=veterinario";
     private $username = "root";
     private $password = ""; // Adicionado um espaço entre private e password
     private $pdo;
