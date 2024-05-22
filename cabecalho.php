@@ -6,6 +6,13 @@
     <title>Veterinario</title>
     
     <style>
+        .subtitle {
+          width: 100%; 
+          height: 30vh; 
+          display: flex;
+          justify-content: center; 
+          align-items: center; 
+        }
         .container {
             width: 90%; 
             height: 70vh; 

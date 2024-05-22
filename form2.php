@@ -17,6 +17,12 @@
     <div class="valid-tooltip">
     </div>
   </div>
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip02" class="form-label">Idade do Animal</label>
+    <input type="text" name = "idade" class="form-control" id="validationTooltip02" value="" required>
+    <div class="valid-tooltip">
+    </div>
+  </div>
   </div>
   <div class="col-md-6 position-relative">
     <label for="validationTooltip03" class="form-label">Espécie do Animal:</label>

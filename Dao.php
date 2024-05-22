@@ -60,6 +60,23 @@ class Dao {
             echo "Erro ao verificar login: " . $ex->getMessage();
         }
     }
+
+    public function cadastroUsuario($usuario, $email, $senha){
+        try {
+            $stmt = $this->pdo->prepare("insert into login values (null, $usuario, $email, $senha)");
+            $stmt->execute([$usuario, $email, $senha]);
+            if($stmt->fetch()){
+                header("Location: conteudo.php");
+                exit(); // Terminar o script após o redirecionamento
+            } else { 
+                header("Location: index.php");
+                exit(); // Terminar o script após o redirecionamento
+            }
+        } catch(PDOException $ex){
+            // Tratamento de erro na consulta de login
+            echo "Usuario ou email ja cadastrados: " . $ex->getMessage();
+        }
+    }
 }
 
 
