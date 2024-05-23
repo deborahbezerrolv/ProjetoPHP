@@ -8,14 +8,16 @@
     <style>
         .subtitle {
           width: 100%; 
-          height: 30vh; 
+          height: 30vh;
+          font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+          text-shadow: 10px, 10px, 40px;
           display: flex;
           justify-content: center; 
           align-items: center; 
         }
         .container {
-            width: 90%; 
-            height: 70vh; 
+            width: 100%; 
+            height: 90vh; 
             display: flex;
             justify-content: center; 
             align-items: center; 
@@ -39,7 +41,12 @@
           display: flex;
           justify-content: left;
           align-items: center;
- 
+        }
+        .container {
+          background-color: red;
+        }
+        .mb-3 {
+          background-color:  green;
         }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">

@@ -1,6 +1,6 @@
 <div>
     <div class="subtitle">
-        <h3>Registre-se</h3>
+        <h1>Registre-se</h1>
     </div>
         <div class="container">
             <div class="row">
