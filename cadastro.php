@@ -1,6 +1,5 @@
 <div>
     <div class="subtitle">
-        <h1>Registre-se</h1>
     </div>
         <div class="container">
             <div class="row">

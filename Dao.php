@@ -1,8 +1,8 @@
 <?php
 class Dao {
-    private $dsn = "mysql:host=localhost;dbname=veterinario";
-    private $username = "root";
-    private $password = ""; // Adicionado um espaço entre private e password
+    private $dsn = "mysql:host=192.168.8.10;dbname=grupo01";
+    private $username = "grupo01";
+    private $password = "password"; // Adicionado um espaço entre private e password
     private $pdo;
 
     public function __construct(){
@@ -21,7 +21,7 @@ class Dao {
     public function insertLogin($usuario, $senha){
         try {
             // Usar prepared statements para evitar SQL Injection
-            $stmt = $this->pdo->prepare("INSERT INTO login VALUES (null, ?, ?)");
+            $stmt = $this->pdo->prepare("INSERT INTO cliente VALUES (null, ?, ?)");
             $stmt->execute([$usuario, $senha]);
         } catch(PDOException $ex){
             // Tratamento de erro durante a inserção
@@ -31,7 +31,7 @@ class Dao {
 
     public function listar(){
         try {
-            $stmt = $this->pdo->query("SELECT * FROM login");
+            $stmt = $this->pdo->query("SELECT * FROM cliente");
             return $stmt;
         } catch(PDOException $ex){
             // Tratamento de erro na consulta SQL
@@ -40,13 +40,13 @@ class Dao {
     }
 
     public function exibirUsuario($id){
-        $stmt = $this->pdo->query("select * from login");
+        $stmt = $this->pdo->query("select * from cliente");
             return $stmt;
     }
 
     public function verificaLogin($usuario, $senha){
         try {
-            $stmt = $this->pdo->prepare("SELECT * FROM login WHERE usuario = ? AND senha = ?");
+            $stmt = $this->pdo->prepare("SELECT * FROM cliente WHERE usuario = ? AND senha = ?");
             $stmt->execute([$usuario, $senha]);
             if($stmt->fetch()){
                 header("Location: conteudo.php");
@@ -63,7 +63,7 @@ class Dao {
 
     public function cadastroUsuario($usuario, $email, $senha){
         try {
-            $stmt = $this->pdo->prepare("insert into login values (null, $usuario, $email, $senha)");
+            $stmt = $this->pdo->prepare("insert into cliente values (null, $usuario, $email, $senha)");
             $stmt->execute([$usuario, $email, $senha]);
             if($stmt->fetch()){
                 header("Location: conteudo.php");
@@ -77,6 +77,8 @@ class Dao {
             echo "Usuario ou email ja cadastrados: " . $ex->getMessage();
         }
     }
+
+    public function botaoCadastro
 }
 
 
