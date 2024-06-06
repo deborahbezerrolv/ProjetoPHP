@@ -16,7 +16,7 @@
                     </div>
                     <div class="text-center">
                         <button type="submit" class="  btn btn-primary mt-3">Entrar</button>
-                        <button type="submit" class="  btn btn-primary mt-3">Registre-se</button>
+                        <button type="submit" class="  btn btn-primary mt-3"><a href="cadastro.php">Registre-se</a></button>
                     </div>
 
                 </form>

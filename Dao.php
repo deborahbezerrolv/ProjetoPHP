@@ -1,8 +1,8 @@
 <?php
 class Dao {
-    private $dsn = "mysql:host=192.168.8.10;dbname=grupo01";
-    private $username = "grupo01";
-    private $password = "password"; // Adicionado um espaço entre private e password
+    private $dsn = "mysql:host=192.168.8.10;dbname=grupo01php";
+    private $username = "grupophp01";
+    private $password = "php01"; // Adicionado um espaço entre private e password
     private $pdo;
 
     public function __construct(){
@@ -18,11 +18,18 @@ class Dao {
         }
     }
 
-    public function insertLogin($usuario, $senha){
+    public function insertLogin($usuario, $email, $senha){
         try {
             // Usar prepared statements para evitar SQL Injection
-            $stmt = $this->pdo->prepare("INSERT INTO cliente VALUES (null, ?, ?)");
-            $stmt->execute([$usuario, $senha]);
+            $stmt = $this->pdo->prepare("INSERT INTO cliente VALUES (null, ?, ?, ?)");
+            $stmt->execute([$usuario, $email, $senha]);
+            if($stmt->fetch()){
+                header("Location: pagLogin.php");
+                exit(); // Terminar o script após o redirecionamento
+            } else { 
+                header("Location: cadastro.php");
+                exit(); // Terminar o script após o redirecionamento
+            }
         } catch(PDOException $ex){
             // Tratamento de erro durante a inserção
             echo "Erro durante a inserção: " . $ex->getMessage();
@@ -61,6 +68,23 @@ class Dao {
         }
     }
 
+    public function verificaCadastro($usuario, $email, $senha){
+        try {
+            $stmt = $this->pdo->prepare("insert into cliente values (?, ?, ?)");
+            $stmt->execute([$usuario, $email, $senha]);
+            if($stmt->fetch()){
+                header("Location: formLogin.php");
+                exit(); // Terminar o script após o redirecionamento
+            } else { 
+                header("Location: cadastro.php");
+                exit(); // Terminar o script após o redirecionamento
+            }
+        } catch(PDOException $ex){
+            // Tratamento de erro na consulta de login
+            echo "Erro ao cadastrar usuario: " . $ex->getMessage();
+        }
+    }
+
     public function cadastroUsuario($usuario, $email, $senha){
         try {
             $stmt = $this->pdo->prepare("insert into cliente values (null, $usuario, $email, $senha)");
@@ -77,9 +101,8 @@ class Dao {
             echo "Usuario ou email ja cadastrados: " . $ex->getMessage();
         }
     }
-
-    public function botaoCadastro
 }
+
 
 
 

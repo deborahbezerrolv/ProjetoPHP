@@ -6,7 +6,7 @@ create table login(
 id int (15) not null unique,
 usuario varchar (45) not null unique,
 email varchar (45) not null unique,
-senha int (16) not null
+senha varchar (16) not null
 );
 
 
