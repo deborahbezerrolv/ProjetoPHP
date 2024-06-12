@@ -1,8 +1,8 @@
 <?php
 class Dao {
-    private $dsn = "mysql:host=localhost;dbname=veterinario";
-    private $username = "root";
-    private $password = ""; // Adicionado um espaço entre private e password
+    private $dsn = "mysql:host=192.168.8.10;dbname=grupo01php";
+    private $username = "grupophp01";
+    private $password = "php01"; // Adicionado um espaço entre private e password
     private $pdo;
 
     public function __construct(){
@@ -56,7 +56,7 @@ class Dao {
             $stmt = $this->pdo->prepare("SELECT * FROM cliente WHERE usuario = ? AND senha = ?");
             $stmt->execute([$usuario, $senha]);
             if($stmt->fetch()){
-                header("Location: conteudo.php");
+                header("Location: home.php");
                 exit(); // Terminar o script após o redirecionamento
             } else { 
                 header("Location: index.php");

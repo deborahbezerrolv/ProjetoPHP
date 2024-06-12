@@ -1,3 +1,17 @@
+<?php
+    if(isset($_POST['submitCad'])){
+
+    include_once ('config.php');
+
+    $usuario = $_POST['usuario'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $result = mysqli_query($conexao, "INSERT INTO cliente(usuario, email, senha) VALUES ('$usuario', '$email', '$senha')");
+}
+
+?>
+
 <div>
     <div class="subtitle">
     </div>
@@ -23,7 +37,7 @@
                                 <input type="password" name="csenha" class="form-control" id="csenha">
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary mt-3">Entrar</button>
+                                <button type="submit" name="submitCad" class="btn btn-primary mt-3"><a href="index.php">Enviar</a></button>
                             </div>
 
                         </form>

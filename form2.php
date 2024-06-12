@@ -63,4 +63,7 @@
   <div class="col-12">
     <button class="btn btn-success" type="submit">Confirmar Agendamento</button>
   </div>
+  <div class="col-12">
+    <button class="btn btn-success" type="submit"><a href="home.php">Voltar</a></button>
+  </div>
 </form>
