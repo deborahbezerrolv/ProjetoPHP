@@ -18,7 +18,8 @@
                     <div><h6> Se não possui um usuário clique em registre-se </h6></div> <br>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary mt-3">Entrar</button>
-                        <button type="submit" class="btn btn-primary mt-3" style="background-color: cian; color: white;">Registre-se</button>
+                        <a href="cadastro.php">Registre-se</a>
+                        <!-- <button type="submit" class="btn btn-primary mt-3" style="background-color: cian; color: white;">Registre-se</button> -->
                     </div>
                 </form>
             </div>

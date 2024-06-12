@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mt-3">
-                        <form action="verificaCadastro.php" method="post">
+                        <form action="insert.php" method="post">
                             <div class="mb-3">
                                 <label for="usuario" class="form-label">Usuario</label>
                                 <input type="text" name="usuario" class="form-control" id="exampleInputEmail1" aria-describedby="">

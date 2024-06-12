@@ -1,8 +1,8 @@
 <?php
 class Dao {
-    private $dsn = "mysql:host=192.168.8.10;dbname=grupo01php";
-    private $username = "grupophp01";
-    private $password = "php01"; // Adicionado um espaço entre private e password
+    private $dsn = "mysql:host=localhost;dbname=veterinario";
+    private $username = "root";
+    private $password = ""; // Adicionado um espaço entre private e password
     private $pdo;
 
     public function __construct(){
@@ -21,10 +21,10 @@ class Dao {
     public function insertLogin($usuario, $email, $senha){
         try {
             // Usar prepared statements para evitar SQL Injection
-            $stmt = $this->pdo->prepare("INSERT INTO cliente VALUES (null, ?, ?, ?)");
+            $stmt = $this->pdo->query("INSERT INTO cliente VALUES (null, ?, ?, ?)");
             $stmt->execute([$usuario, $email, $senha]);
             if($stmt->fetch()){
-                header("Location: pagLogin.php");
+                header("Location: conteudo.php");
                 exit(); // Terminar o script após o redirecionamento
             } else { 
                 header("Location: cadastro.php");
