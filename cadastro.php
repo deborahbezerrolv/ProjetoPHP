@@ -1,14 +1,14 @@
 <?php
-    if(isset($_POST['submitCad'])){
+//     if(isset($_POST['submitCad'])){
 
-    include_once ('config.php');
+//     include_once ('config.php');
 
-    $usuario = $_POST['usuario'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+//     $usuario = $_POST['usuario'];
+//     $email = $_POST['email'];
+//     $senha = $_POST['senha'];
 
-    $result = mysqli_query($conexao, "INSERT INTO cliente(usuario, email, senha) VALUES ('$usuario', '$email', '$senha')");
-}
+//     $result = mysqli_query($conexao, "INSERT INTO cliente(usuario, email, senha) VALUES ('$usuario', '$email', '$senha')");
+// }
 
 ?>
 
@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mt-3">
-                        <form action="insert.php" method="post">
+                        <form action="verificaCadastro.php" method="post">
                             <div class="mb-3">
                                 <label for="usuario" class="form-label">Usuario</label>
                                 <input type="text" name="usuario" class="form-control" id="exampleInputEmail1" aria-describedby="">
