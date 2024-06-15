@@ -3,7 +3,7 @@ session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifica se todos os campos foram preenchidos
-    if (isset($_POST['usuario']) && isset($_POST['email']) && isset($_POST['senha'])) {
+    if (isset($_POST['usuario']) && isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])) {
         // Conexão com o banco de dados (substitua com suas credenciais)
         $conexao = new mysqli("localhost", "root", "", "grupo01php");
 
@@ -21,27 +21,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verifica se já existe um usuário ou email cadastrado
         if ($result->num_rows > 0) {
-            echo "Usuário ou email já cadastrado.";
+            $_SESSION['mensagem'] = "Usuário ou email já cadastrado.";
+            header('Location: pagCad.php');
+            exit();
         } else {
             // Insere o novo usuário no banco de dados
-            $sql_insert = "INSERT INTO cliente (usuario, email, senha) VALUES (?, ?, ?)";
+            $sql_insert = "INSERT INTO cliente (nome, usuario, email, senha) VALUES (?, ?, ?, ?)";
             $stmt_insert = $conexao->prepare($sql_insert);
 
             // Não vamos usar hash para a senha
             $senha = $_POST['senha'];
 
-            $stmt_insert->bind_param("sss", $_POST['usuario'], $_POST['email'], $senha);
+            $stmt_insert->bind_param("ssss", $_POST['nome'], $_POST['usuario'], $_POST['email'], $senha);
             if ($stmt_insert->execute()) {
-                echo "Cadastro realizado com sucesso.";
+                $_SESSION['mensagem'] = "Cadastro realizado com sucesso.";
+                header('Location: index.php');
+                exit();
             } else {
-                echo "Erro ao cadastrar usuário: " . $conexao->error;
+                $_SESSION['mensagem'] = "Erro ao cadastrar usuário: " . $conexao->error;
+                header('Location: pagCad.php');
+                exit();
             }
         }
 
         // Fecha a conexão com o banco de dados
         $conexao->close();
     } else {
-        echo "Por favor, preencha todos os campos.";
+        $_SESSION['mensagem'] = "Por favor, preencha todos os campos.";
+        header('Location: pagCad.php');
+        exit();
     }
 }
-?>
