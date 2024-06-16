@@ -26,7 +26,7 @@
             align-items: center;
             background-color: rgb(247, 247, 247);
             border-radius: 10px;
-            box-shadow: 2px 2px 8px black;
+            box-shadow: 2px 2px 8px cyan;
             padding: 3%;
             margin-top: 3%;
         }
@@ -54,6 +54,38 @@
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .agenda {
+          width: 100%; 
+            height: 90vh; 
+            display: flex;
+            justify-content: center; 
+            align-items: left;
+            background-color: rgb(247, 247, 247);
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px cyan;
+            padding: 3%;
+            margin-top: 3%;
+        }
+        .stylehome {
+          background-color: cyan;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center; /* Centraliza o conteúdo interno */
+            width: 80%; /* Largura da div */
+            max-width: 600px; /* Largura máxima para melhor visualização em telas maiores */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        .btn {
+          background-color: cyan; /* Cor de fundo ciano para os botões */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
         }
 
         .container-fluid{
