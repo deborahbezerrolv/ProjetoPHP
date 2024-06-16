@@ -69,23 +69,25 @@
             margin-top: 3%;
         }
         .stylehome {
-          background-color: cyan;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center; /* Centraliza o conteúdo interno */
-            width: 80%; /* Largura da div */
-            max-width: 600px; /* Largura máxima para melhor visualização em telas maiores */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+          width: 100%; 
+            height: 90vh; 
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            background-color: #19e5e6;
+            border-radius: 300px;
+            box-shadow: 3px 5px 70px cyan;
+            padding: 1%;
+            margin-top: 1%;
         }
-        .btn {
-          background-color: cyan; /* Cor de fundo ciano para os botões */
+          .styletitle{
+            align-items: center;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-            cursor: pointer;
+            margin: 10%;
+          }
+          .links {
+          color: white;
+          text-decoration: none;
         }
 
         .container-fluid{
@@ -95,10 +97,19 @@
           width: 70%;
           height: 40%;
         }
-
-        .links {
-          color: white;
-          text-decoration: none;
+        .btn {
+            background-color: blue; /* Botões com fundo transparente */
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+            color: blue; /* Cor do texto dos botões */
+            border: 2px solid white; /* Borda branca */
+            border-radius: 4px; /* Borda arredondada */
+            transition: background-color 0.3s ease; /* Transição suave */
+        
         }
 
         .form-label {
