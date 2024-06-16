@@ -63,7 +63,7 @@
             justify-content: center; 
             align-items: left;
             background-color: rgb(247, 247, 247);
-            border-radius: 10px;
+            border-radius: 100px;
             box-shadow: 2px 2px 8px cyan;
             padding: 3%;
             margin-top: 3%;
@@ -105,7 +105,7 @@
             display: inline-block;
             margin-top: 10px;
             cursor: pointer;
-            color: blue; /* Cor do texto dos botões */
+            color: white; /* Cor do texto dos botões */
             border: 2px solid white; /* Borda branca */
             border-radius: 4px; /* Borda arredondada */
             transition: background-color 0.3s ease; /* Transição suave */
