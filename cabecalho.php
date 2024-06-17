@@ -57,7 +57,7 @@
         }
 
         .agenda {
-          width: 100%; 
+            width: 100%; 
             height: 90vh; 
             display: flex;
             justify-content: center; 
@@ -69,7 +69,7 @@
             margin-top: 3%;
         }
         .stylehome {
-          width: 100%; 
+            width: 100%; 
             height: 90vh; 
             display: flex;
             justify-content: center; 
@@ -105,8 +105,8 @@
             display: inline-block;
             margin-top: 10px;
             cursor: pointer;
-            color: white; /* Cor do texto dos botões */
-            border: 2px solid white; /* Borda branca */
+            color: black; /* Cor do texto dos botões */
+            border: 2px solid black; /* Borda branca */
             border-radius: 4px; /* Borda arredondada */
             transition: background-color 0.3s ease; /* Transição suave */
         
@@ -125,10 +125,11 @@
         }
 
         .rodape {
+          margin-top: 10vh;
           background-color: #333;
           color: #fff;
           padding: 20px 0;
-        text-align: center;
+          text-align: center;
         } 
 
         .rodape-itens {
@@ -141,6 +142,12 @@
             flex: 1;
             text-align: center;
             padding: 10px;
+        }
+
+        .mt-3 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
     </style>

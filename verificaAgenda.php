@@ -5,7 +5,6 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebe e sanitiza os dados do formulário
     $id_cliente = $_POST['id_cliente']; // ID do cliente vindo do campo oculto no formulário
-    $nome = $_POST['nome']
     $cpf = $_POST['cpf'];
     $nome_animal = $_POST['nome_animal'];
     $especie = $_POST['especie'];
