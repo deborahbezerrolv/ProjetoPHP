@@ -14,7 +14,7 @@
                      </div>
 
                     <div class="mb-3">
-                        <label for="usuario" class="form-label">Nome</label>
+                        <label for="name" class="form-label">Nome</label>
                          <input type="text" name="nome" class="form-control" id="nome" aria-describedby="">
                      </div>
 

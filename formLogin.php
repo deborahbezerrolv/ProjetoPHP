@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submitLog" class="btn btn-primary mt-3">Entrar</button>
+                        <button name="submitLogin" type="submit" class="btn btn-primary mt-3">Entrar</button>
                         <button type="submit" class="btn btn-primary mt-3" style="background-color: cian; color: white;"><a href="pagCad.php" class="links">Registre-se</a></button>
                     </div>
 

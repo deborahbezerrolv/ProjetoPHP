@@ -1,5 +1,5 @@
 <?php
 
 require_once "cabecalho.php";
-include "agenda.php";
+include "verConsulta.php";
 require_once "rodape.php";

@@ -1,6 +1,6 @@
 <div class="agenda">
              <div class="mt-13">
-                <form action="formulario.php" method="post">
+                <form action="verificaAgenda.php" method="post">
 
                 <input type="hidden" id="id_cliente" name="id_cliente" value="<?php echo $_SESSION['id_cliente']; ?>">
                     <div class="mb-3">
@@ -59,8 +59,8 @@
                         <input type="time" id="horario" name="horario" required>
                     </div><br>
 
-                    <div>
-                        <button type="submit" class="btn btn-primary mt-3">Confirmar Agendamento</button>
+                    <div class="text-center">
+                        <button name="submitAgenda" type="submit" class="btn btn-primary mt-3">Confirmar Agendamento</button>
                     </div><br>
 
                 </form>

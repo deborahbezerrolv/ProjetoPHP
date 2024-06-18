@@ -8,7 +8,11 @@
             </div>
 
             <div class="mt-3">
-                <button class="btn"><a href="conteudo.php" class="btn">Agendar consulta</a></button>
+                <button class="btn"><a href="pagAgenda.php" class="btn">Agendar consulta</a></button>
+            </div>
+
+            <div class="mt-3">
+                <button class="btn"><a href="pagVerConsulta.php" class="btn">Minhas consultas</a></button>
             </div>
 
             <div class="mt-3">
