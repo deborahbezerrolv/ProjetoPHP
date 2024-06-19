@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+// essa não funciona
 if (isset($_POST['submitEmail']) && !empty($_POST['email_cliente'])) {
     include_once ('config.php');
 
@@ -20,15 +20,16 @@ if (isset($_POST['submitEmail']) && !empty($_POST['email_cliente'])) {
 
  
     if ($result_consultas->num_rows > 0) {
-        // echo "<h2>Consultas encontradas para o email $email_cliente:</h2>";
-        // echo "<ul>";
-        // while ($row = $result_consultas->fetch_assoc()) {
-        //     echo "<li>Data da Consulta: {$row['data_cons']}, Horário: {$row['horario']}</li>";
+        echo "<h2>Consultas encontradas para o email $email_cliente:</h2>";
+        echo "<ul>";
+        while ($row = $result_consultas->fetch_assoc()) {
+            echo "<li>Data da Consulta: {$row['data_cons']}, Horário: {$row['horario']}</li>";
         }  
         echo "</ul>";
 
 } else {
         echo "<p>Nenhuma consulta encontrada para o email $email_cliente.</p>";
     }
+}
 
 
