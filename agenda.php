@@ -61,7 +61,7 @@
 
                     <div class="text-center">
                         <button name="submitAgenda" type="submit" class="btn btn-primary mt-3">Confirmar Agendamento</button>
-                    </div><br>
+                    </div>
 
                 </form>
              </div>

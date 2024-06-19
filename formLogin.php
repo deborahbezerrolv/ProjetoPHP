@@ -5,7 +5,7 @@
                 <form action="verificaLogin.php" method="post">
 
                     <div>
-                        <h1>Seja bem vindo a Clinica Veterinária Madagascar</h1>
+                        <h1>Seja bem vindo a Clínica Veterinária Madagascar</h1>
                     </div>
 
                     <div>
