@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario_cliente'])) {
 }
 
 
-$conexao = new mysqli("localhost", "root", "", "grupo01php");
+include_once ('config.php');
 
 
 if ($conexao->connect_error) {

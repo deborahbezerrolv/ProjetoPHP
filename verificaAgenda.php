@@ -4,6 +4,7 @@ session_start();
 
 // Verifica se o formulário foi submetido
 if (isset($_POST['submitAgenda'])) {
+    include_once ('config.php');
     // Recebe e sanitiza os dados do formulário
     $cpf = $_POST['cpf'];
     $nome_animal = $_POST['nome_animal'];
@@ -14,9 +15,6 @@ if (isset($_POST['submitAgenda'])) {
     $tel = $_POST['tel'];
     $data_cons = $_POST['data_cons'];
     $horario = $_POST['horario'];
-
-    // Conexão com o banco de dados (substitua com suas credenciais)
-    $conexao = new mysqli("localhost", "root", "", "grupo01php");
 
     // Verifica a conexão
     if ($conexao->connect_error) {
