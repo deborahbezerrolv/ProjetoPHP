@@ -30,6 +30,18 @@
             padding: 3%;
             margin-top: 3%;
         }
+        .containerAgenda {
+            width: 100%; 
+            height: 90%; 
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            background-color: rgb(247, 247, 247);
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px cyan;
+            padding: 3%;
+            margin-top: 3%;
+        }
         .centered {
             width: 70%; 
             text-align: center;

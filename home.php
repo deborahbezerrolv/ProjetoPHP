@@ -12,7 +12,7 @@
             </div>
 
             <div class="text-center">
-                <button class="btn btn-primary mt-3"><a href="pagVerConsulta.php" class="links">Minhas consultas</a></button>
+                <button class="btn btn-primary mt-3"><a href="pagPE.php" class="links">Minhas consultas</a></button>
             </div>
 
             <div class="text-center">
