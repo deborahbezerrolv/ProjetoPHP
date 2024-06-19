@@ -19,7 +19,7 @@
                 alert('Este email ou nome de usuário já está cadastrado. Por favor, escolha outros.');
               </script>";
     } else {
-        $result = mysqli_query($conexao, "INSERT INTO cliente(nome, email, , nick_usuario, senha) VALUES ('$nome', '$email', '$dataNascimento', '$nomeUsuario', '$senha')");
+        $result = mysqli_query($conexao, "INSERT INTO cliente(nome, email, usuario, senha) VALUES ('$nome', '$email', '$usuario', '$senha')");
 
         if ($result) {
             header("Location: pagLogin.php");
