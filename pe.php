@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <div class="mt-3">
-                <form action="verificaEmail.php">
+                <form action="verificaEmail.php" method="post">
 
                     <div class="mb-3">
                         <h2>Digite seu e-mail: </h2>
